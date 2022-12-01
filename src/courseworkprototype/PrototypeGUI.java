@@ -29,11 +29,11 @@ public class PrototypeGUI extends javax.swing.JFrame {
         CreateOrder = new javax.swing.JButton();
         CheckOrders = new javax.swing.JButton();
         Exit = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        ActiveOrders = new javax.swing.JButton();
+        Reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         CreateOrder.setBackground(new java.awt.Color(204, 204, 204));
         CreateOrder.setText("Create New Order");
@@ -42,7 +42,6 @@ public class PrototypeGUI extends javax.swing.JFrame {
                 CreateOrderActionPerformed(evt);
             }
         });
-        getContentPane().add(CreateOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 140, -1));
 
         CheckOrders.setBackground(new java.awt.Color(204, 204, 204));
         CheckOrders.setText("Check Orders");
@@ -51,19 +50,53 @@ public class PrototypeGUI extends javax.swing.JFrame {
                 CheckOrdersActionPerformed(evt);
             }
         });
-        getContentPane().add(CheckOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 140, -1));
 
         Exit.setBackground(new java.awt.Color(204, 204, 204));
         Exit.setText("Exit");
-        getContentPane().add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 140, -1));
 
-        jButton1.setText("Active Orders");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ActiveOrders.setText("Active Orders");
+        ActiveOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ActiveOrdersActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 140, -1));
+
+        Reset.setText("Reset");
+        Reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ResetActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ActiveOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CreateOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CheckOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Reset, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(130, 130, 130))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(CreateOrder)
+                .addGap(18, 18, 18)
+                .addComponent(CheckOrders)
+                .addGap(17, 17, 17)
+                .addComponent(ActiveOrders)
+                .addGap(17, 17, 17)
+                .addComponent(Reset)
+                .addGap(17, 17, 17)
+                .addComponent(Exit)
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -80,11 +113,16 @@ public class PrototypeGUI extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_CheckOrdersActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ActiveOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActiveOrdersActionPerformed
         ActiveOrders f2 = new ActiveOrders();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ActiveOrdersActionPerformed
+
+    private void ResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetActionPerformed
+        Reset f2 = new Reset();
+        f2.setVisible(true);
+    }//GEN-LAST:event_ResetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,9 +160,10 @@ public class PrototypeGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ActiveOrders;
     private javax.swing.JButton CheckOrders;
     private javax.swing.JButton CreateOrder;
     private javax.swing.JButton Exit;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Reset;
     // End of variables declaration//GEN-END:variables
 }
