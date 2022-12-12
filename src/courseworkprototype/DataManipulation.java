@@ -10,6 +10,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author 1-NJacobs
@@ -21,8 +23,19 @@ public class DataManipulation {
     
     private static final String SQL_PASSWORD = "JLrpC62umv";
     
-    public static void main(String[] args) {
+    public static void orderDetails(String customername, String postcode, String housenumber, String roadname, String phonenumber ) {
         // TODO code application logic here
-        try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) 
-        {
-}
+        try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);
+                ) {
+            Statement statement=conn.createStatement();
+            statement.execute("INSERT INTO customerInfo(null, '" +customername+","+postcode+","+housenumber+","+roadname+","+phonenumber+"');");
+}       catch (SQLException ex) {
+            System.out.println(ex);
+        }
+        
+        
+    }
+    
+    }
+
+    
