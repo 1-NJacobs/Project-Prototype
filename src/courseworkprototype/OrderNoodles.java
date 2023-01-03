@@ -27,16 +27,16 @@ public class OrderNoodles extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        ChickenChow = new javax.swing.JButton();
+        BeefChow = new javax.swing.JButton();
+        PorkChow = new javax.swing.JButton();
+        DuckChow = new javax.swing.JButton();
+        PrawnChow = new javax.swing.JButton();
+        ShrimpChow = new javax.swing.JButton();
+        SingaporeChow = new javax.swing.JButton();
+        FriedChow = new javax.swing.JButton();
+        MixedChow = new javax.swing.JButton();
+        HouseChow = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,43 +49,73 @@ public class OrderNoodles extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Chicken Chow Mein");
-
-        jButton3.setText("Beef Chow Mein");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ChickenChow.setText("Chicken Chow Mein");
+        ChickenChow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ChickenChowActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Pork Chow mein");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BeefChow.setText("Beef Chow Mein");
+        BeefChow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BeefChowActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Shredded Duck Chow Mein");
-
-        jButton6.setText("King Prawn Chow Mein");
-
-        jButton7.setText("Shrimp Chow Mein");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        PorkChow.setText("Pork Chow mein");
+        PorkChow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                PorkChowActionPerformed(evt);
             }
         });
 
-        jButton8.setText("Singapore Chow Mein");
-
-        jButton9.setText("Fried Chow Mein");
-
-        jButton10.setText("Mixed Meat Chow Mein");
-
-        jButton11.setText("House Special Chow Mein");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        DuckChow.setText("Shredded Duck Chow Mein");
+        DuckChow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                DuckChowActionPerformed(evt);
+            }
+        });
+
+        PrawnChow.setText("King Prawn Chow Mein");
+        PrawnChow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PrawnChowActionPerformed(evt);
+            }
+        });
+
+        ShrimpChow.setText("Shrimp Chow Mein");
+        ShrimpChow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShrimpChowActionPerformed(evt);
+            }
+        });
+
+        SingaporeChow.setText("Singapore Chow Mein");
+        SingaporeChow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SingaporeChowActionPerformed(evt);
+            }
+        });
+
+        FriedChow.setText("Fried Chow Mein");
+        FriedChow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FriedChowActionPerformed(evt);
+            }
+        });
+
+        MixedChow.setText("Mixed Meat Chow Mein");
+        MixedChow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MixedChowActionPerformed(evt);
+            }
+        });
+
+        HouseChow.setText("House Special Chow Mein");
+        HouseChow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HouseChowActionPerformed(evt);
             }
         });
 
@@ -103,18 +133,18 @@ public class OrderNoodles extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(DuckChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PrawnChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PorkChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BeefChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ChickenChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(HouseChow, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                    .addComponent(MixedChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FriedChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SingaporeChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ShrimpChow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(17, 17, 17))
         );
         layout.setVerticalGroup(
@@ -128,24 +158,24 @@ public class OrderNoodles extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton7))
+                    .addComponent(ChickenChow)
+                    .addComponent(ShrimpChow))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton8))
+                    .addComponent(BeefChow)
+                    .addComponent(SingaporeChow))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton9))
+                    .addComponent(PorkChow)
+                    .addComponent(FriedChow))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton10))
+                    .addComponent(DuckChow)
+                    .addComponent(MixedChow))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton11))
+                    .addComponent(PrawnChow)
+                    .addComponent(HouseChow))
                 .addGap(0, 55, Short.MAX_VALUE))
         );
 
@@ -158,21 +188,55 @@ public class OrderNoodles extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void PorkChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PorkChowActionPerformed
+        int menuID = 3;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_PorkChowActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    private void HouseChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HouseChowActionPerformed
+        int menuID = 10;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_HouseChowActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void BeefChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeefChowActionPerformed
+        int menuID = 2;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_BeefChowActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void ShrimpChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShrimpChowActionPerformed
+        int menuID = 6;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_ShrimpChowActionPerformed
+
+    private void ChickenChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenChowActionPerformed
+        int menuID = 1;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_ChickenChowActionPerformed
+
+    private void MixedChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MixedChowActionPerformed
+        int menuID = 9;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_MixedChowActionPerformed
+
+    private void DuckChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DuckChowActionPerformed
+        int menuID = 4;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_DuckChowActionPerformed
+
+    private void PrawnChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrawnChowActionPerformed
+        int menuID = 5;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_PrawnChowActionPerformed
+
+    private void SingaporeChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingaporeChowActionPerformed
+        int menuID = 7;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_SingaporeChowActionPerformed
+
+    private void FriedChowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FriedChowActionPerformed
+        int menuID = 8;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_FriedChowActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,17 +274,17 @@ public class OrderNoodles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
+    private javax.swing.JButton BeefChow;
+    private javax.swing.JButton ChickenChow;
+    private javax.swing.JButton DuckChow;
+    private javax.swing.JButton FriedChow;
+    private javax.swing.JButton HouseChow;
+    private javax.swing.JButton MixedChow;
+    private javax.swing.JButton PorkChow;
+    private javax.swing.JButton PrawnChow;
+    private javax.swing.JButton ShrimpChow;
+    private javax.swing.JButton SingaporeChow;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

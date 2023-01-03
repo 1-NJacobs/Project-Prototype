@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package courseworkprototype;
-
+import java.util.LinkedList;
 /**
  *
  * @author natja
@@ -144,6 +144,15 @@ public class OrderMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public static void orderList(int menuID){
+        LinkedList order = new LinkedList();
+        
+        order.add(menuID);
+        
+        System.out.println(order);
+        
+    }
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         NewOrder f2= new  NewOrder();
         f2.setVisible(true);
