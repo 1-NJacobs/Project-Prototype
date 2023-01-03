@@ -28,7 +28,7 @@ public class DataManipulation {
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);
                 ) {
             Statement statement=conn.createStatement();
-            statement.execute("INSERT INTO customerInfo(null, '" +customername+","+postcode+","+housenumber+","+roadname+","+phonenumber+"');");
+            statement.execute("INSERT INTO customerInfo VALUES(null, '" +customername+"','"+postcode+"',"+housenumber+",'"+roadname+"',"+phonenumber+");");
 }       catch (SQLException ex) {
             System.out.println(ex);
         }
