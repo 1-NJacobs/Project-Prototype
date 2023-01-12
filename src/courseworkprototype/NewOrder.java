@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package courseworkprototype;
-
+import java.util.LinkedList;
 /**
  *
  * @author natja
@@ -15,6 +15,7 @@ public class NewOrder extends javax.swing.JFrame {
      */
     public NewOrder() {
         initComponents();
+        
     }
 
     /**
@@ -200,6 +201,9 @@ public class NewOrder extends javax.swing.JFrame {
        String roadname = roadnamefield.getText();
        String phonenumber = phonenumberfield.getText();
        DataManipulation.orderDetails(customername, postcode, housenumber, roadname, phonenumber);
+       
+       
+       
        OrderMain f2= new  OrderMain();
        f2.setVisible(true);
        this.dispose();

@@ -3,18 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package courseworkprototype;
+
 import java.util.LinkedList;
+
 /**
  *
  * @author natja
  */
 public class OrderMain extends javax.swing.JFrame {
 
+    private static LinkedList order = new LinkedList();
+
     /**
      * Creates new form OrderMain
      */
     public OrderMain() {
+        
         initComponents();
+        
     }
 
     /**
@@ -145,7 +151,6 @@ public class OrderMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public static void orderList(int menuID){
-        LinkedList order = new LinkedList();
         
         order.add(menuID);
         
