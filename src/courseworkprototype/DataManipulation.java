@@ -37,15 +37,17 @@ public class DataManipulation {
         
         
     }
-   // public static void orderItems(String customername, String postcode, String housenumber, String roadname, String phonenumber ) {
-        // TODO code application logic here
-  //      try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);
-   //             ) {
-    //        Statement statement=conn.createStatement();
-    //        statement.execute("INSERT INTO item VALUES(null, '" +customername+"','"+postcode+"',"+housenumber+",'"+roadname+"',"+phonenumber+");");
-}   //    catch (SQLException ex) {
-    //        System.out.println(ex);
-    //    }
-    //}
+    public static void orderItems(int i) {
+         //TODO code application logic here
+        try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
+            Statement statement=conn.createStatement();
+            for (i=0; i < order.size() ; i++){
+            statement.execute("INSERT INTO item VALUES(null, '"+order.get(i)+");");
+        }
+}       catch (SQLException ex) {
+            System.out.println(ex);
+        }
+    }
+}
 
     
