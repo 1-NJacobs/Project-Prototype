@@ -178,6 +178,7 @@ public class OrderMain extends javax.swing.JFrame {
 
     private void CompleteOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompleteOrderActionPerformed
         //DataManipulation.orderItems();
+        DataManipulation.orderItems(order);
         PrototypeGUI f2= new  PrototypeGUI();
         f2.setVisible(true);
         this.dispose();

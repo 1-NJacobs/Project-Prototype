@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.LinkedList;
 /**
  *
  * @author 1-NJacobs
@@ -28,26 +29,28 @@ public class DataManipulation {
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);
                 ) {
             Statement statement=conn.createStatement();
-            statement.execute("INSERT INTO customerInfo VALUES(null, '" +customername+"','"+postcode+"',"+housenumber+",'"+roadname+"',"+phonenumber+");");
-            ResultSet results = statement.executeQuery("SELECT MAX(customerID) FROM customerInfo");
-            statement.execute("INSERT INTO OrderTable VALUES ("+results+",null);");
+            statement.execute("INSERT INTO customerInfo VALUES(null, '" +customername+"','"+postcode+"',"+housenumber+",'"+roadname+"',"+phonenumber+");");    
+            statement.execute("INSERT INTO OrderTable VALUES (null, (SELECT MAX(customerID) FROM customerInfo));");
 }       catch (SQLException ex) {
             System.out.println(ex);
         }
         
         
     }
-    public static void orderItems(int i) {
+    public static void orderItems(LinkedList order) {
          //TODO code application logic here
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
             Statement statement=conn.createStatement();
-            for (i=0; i < order.size() ; i++){
-            statement.execute("INSERT INTO item VALUES(null, '"+order.get(i)+");");
+            for (int i=0; i < order.size() ; i++){
+                statement.execute("INSERT INTO item VALUES("+order.get(i)+", (SELECT MAX(orderID) FROM OrderTable));");
         }
 }       catch (SQLException ex) {
             System.out.println(ex);
         }
     }
+    
 }
+    
+
 
     
