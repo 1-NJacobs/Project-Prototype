@@ -52,11 +52,14 @@ public class DataManipulation {
     public static void resetDB(){
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
             Statement statement=conn.createStatement();
-            
+            statement.execute("DELETE FROM OrderTable;"
+                    + "DELETE FROM customerInfo;"
+                    + "DELETE FROM item;");
 }       catch (SQLException ex) {
             System.out.println(ex);
     }
     
+}
 }
     
 
