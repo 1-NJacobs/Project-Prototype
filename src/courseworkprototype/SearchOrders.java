@@ -113,7 +113,7 @@ public class SearchOrders extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "CustomerID", "Name", "Postcode", "House Num", "Road Name", "Phone Num"
+                "CustomerID", "Name", "Postcode", "HouseNum", "RoadName", "PhoneNum"
             }
         ));
         jScrollPane1.setViewportView(Display);

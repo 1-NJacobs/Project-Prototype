@@ -162,9 +162,9 @@
                     <Column editable="true" title="CustomerID" type="java.lang.Object"/>
                     <Column editable="true" title="Name" type="java.lang.Object"/>
                     <Column editable="true" title="Postcode" type="java.lang.Object"/>
-                    <Column editable="true" title="House Num" type="java.lang.Object"/>
-                    <Column editable="true" title="Road Name" type="java.lang.Object"/>
-                    <Column editable="true" title="Phone Num" type="java.lang.Object"/>
+                    <Column editable="true" title="HouseNum" type="java.lang.Object"/>
+                    <Column editable="true" title="RoadName" type="java.lang.Object"/>
+                    <Column editable="true" title="PhoneNum" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

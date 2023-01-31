@@ -52,13 +52,34 @@ public class DataManipulation {
     public static void resetDB(){
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
             Statement statement=conn.createStatement();
-            statement.execute("DELETE FROM OrderTable;"
-                    + "DELETE FROM customerInfo;"
-                    + "DELETE FROM item;");
+            statement.execute("DELETE FROM OrderTable;");
+            statement.execute("DELETE FROM customerInfo;");
+            statement.execute("DELETE FROM item;");
 }       catch (SQLException ex) {
             System.out.println(ex);
     }
     
+}
+    public static void displaySearch (){
+        try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
+            Statement statement=conn.createStatement();
+            String sql = "SELECT * FROM cusomerInfo";
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()){
+                String CustomerID = String.valueOf(rs.getInt("CustomerID"));
+                String Name = String.valueOf(rs.getString("customername"));
+                String Postcode = String.valueOf(rs.getString("postcode"));
+                String HouseNum = String.valueOf(rs.getInt("housenumber"));
+                String RoadName= String.valueOf(rs.getString("roadname"));
+                String PhoneNum = String.valueOf(rs.getInt("phonenumber"));
+                
+                String Display[] =  {CustomerID, Name, Postcode, HouseNum, RoadName, RoadName};
+                   DefaultTableModel tblModel = (DefaultTableModel)Display.getmodel();
+            }
+            
+}       catch (SQLException ex) {
+            System.out.println(ex);
+    }
 }
 }
     
