@@ -10,8 +10,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 /**
  *
@@ -60,10 +60,11 @@ public class DataManipulation {
     }
     
 }
-    public static void displaySearch (){
+    public static ArrayList<String[]> displaySearch (){
+        ArrayList<String[]> toreturn = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
             Statement statement=conn.createStatement();
-            String sql = "SELECT * FROM cusomerInfo";
+            String sql = "SELECT * FROM customerInfo";
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()){
                 String CustomerID = String.valueOf(rs.getInt("CustomerID"));
@@ -73,13 +74,16 @@ public class DataManipulation {
                 String RoadName= String.valueOf(rs.getString("roadname"));
                 String PhoneNum = String.valueOf(rs.getInt("phonenumber"));
                 
-                String Display[] =  {CustomerID, Name, Postcode, HouseNum, RoadName, RoadName};
-                   DefaultTableModel tblModel = (DefaultTableModel)Display.getmodel();
+                String[] tbData = {CustomerID, Name, Postcode, HouseNum, RoadName, PhoneNum};
+                toreturn.add(tbData);
+                
             }
             
-}       catch (SQLException ex) {
+            
+} catch (SQLException ex) {
             System.out.println(ex);
     }
+        return toreturn;
 }
 }
     

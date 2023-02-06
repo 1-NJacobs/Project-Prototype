@@ -4,6 +4,9 @@
  */
 package courseworkprototype;
 
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author natja
@@ -16,7 +19,7 @@ public class SearchOrders extends javax.swing.JFrame {
     public SearchOrders() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,6 +39,7 @@ public class SearchOrders extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Display = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        Search = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,7 +49,7 @@ public class SearchOrders extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setText("Delete");
 
-        jLabel2.setText("Selected Order:");
+        jLabel2.setText("Selected Order: ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -56,7 +60,7 @@ public class SearchOrders extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(0, 4, Short.MAX_VALUE))
+                        .addGap(0, 1, Short.MAX_VALUE))
                     .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -140,6 +144,14 @@ public class SearchOrders extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
+        Search.setText("Search");
+        Search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -148,6 +160,16 @@ public class SearchOrders extends javax.swing.JFrame {
         f2.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
+       
+       ArrayList<String[]> TableView = DataManipulation.displaySearch();
+       DefaultTableModel tblModel = (DefaultTableModel)Display.getModel();
+       for (String[] row : TableView){
+           tblModel.addRow(row);
+       }
+       
+    }//GEN-LAST:event_SearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,7 +207,8 @@ public class SearchOrders extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable Display;
+    public javax.swing.JTable Display;
+    private javax.swing.JButton Search;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
