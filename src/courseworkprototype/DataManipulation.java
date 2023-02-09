@@ -60,7 +60,7 @@ public class DataManipulation {
     }
     
 }
-    public static ArrayList<String[]> displaySearch (){
+    public static ArrayList<String[]> displayOrders (){
         ArrayList<String[]> toreturn = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
             Statement statement=conn.createStatement();
@@ -79,6 +79,30 @@ public class DataManipulation {
                 
             }
             
+} catch (SQLException ex) {
+            System.out.println(ex);
+    }
+        return toreturn;
+}
+    
+    public static ArrayList<String[]> SearchOrders (){
+        ArrayList<String[]> toreturn = new ArrayList<>();
+        try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
+            Statement statement=conn.createStatement();
+            String sql = "SELECT * FROM customerInfo";
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()){
+                String CustomerID = String.valueOf(rs.getInt("CustomerID"));
+                String Name = String.valueOf(rs.getString("customername"));
+                String Postcode = String.valueOf(rs.getString("postcode"));
+                String HouseNum = String.valueOf(rs.getInt("housenumber"));
+                String RoadName= String.valueOf(rs.getString("roadname"));
+                String PhoneNum = String.valueOf(rs.getInt("phonenumber"));
+                
+                String[] tbData = {CustomerID, Name, Postcode, HouseNum, RoadName, PhoneNum};
+                toreturn.add(tbData);
+                
+            }
             
 } catch (SQLException ex) {
             System.out.println(ex);
