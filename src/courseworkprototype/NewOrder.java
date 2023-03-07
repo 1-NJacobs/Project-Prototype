@@ -208,7 +208,7 @@ public class NewOrder extends javax.swing.JFrame {
        
        
        
-       OrderMain f2= new  OrderMain();
+       OrderMain f2= new  OrderMain(customername, postcode, housenumber, roadname, phonenumber);
        f2.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_AddOrderActionPerformed
