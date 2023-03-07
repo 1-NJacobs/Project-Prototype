@@ -9,7 +9,11 @@ import java.util.LinkedList;
  * @author natja
  */
 public class NewOrder extends javax.swing.JFrame {
-
+    private static String customername;
+    private static   String postcode;
+    private static   String housenumber;
+    private static   String roadname;
+    private static   String phonenumber;
     /**
      * Creates new form NewOrder
      */
@@ -195,12 +199,12 @@ public class NewOrder extends javax.swing.JFrame {
     }//GEN-LAST:event_housenumberfieldActionPerformed
 
     private void AddOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddOrderActionPerformed
-       String customername = customernamefield.getText();
-       String postcode = postcodefield.getText();
-       String housenumber = housenumberfield.getText();
-       String roadname = roadnamefield.getText();
-       String phonenumber = phonenumberfield.getText();
-       DataManipulation.orderDetails(customername, postcode, housenumber, roadname, phonenumber);
+       customername = customernamefield.getText();
+       postcode = postcodefield.getText();
+       housenumber = housenumberfield.getText();
+       roadname = roadnamefield.getText();
+       phonenumber = phonenumberfield.getText();
+       //DataManipulation.orderDetails(customername, postcode, housenumber, roadname, phonenumber);
        
        
        
