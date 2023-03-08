@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * @author natja
  */
 public class NewOrder extends javax.swing.JFrame {
-    private static String customername;
+    private static   String customername;
     private static   String postcode;
     private static   String housenumber;
     private static   String roadname;
@@ -175,6 +175,10 @@ public class NewOrder extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public static void AddToDB(){
+        DataManipulation.orderDetails(customername, postcode, housenumber, roadname, phonenumber);
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         PrototypeGUI f2= new  PrototypeGUI();
         f2.setVisible(true);
@@ -204,11 +208,11 @@ public class NewOrder extends javax.swing.JFrame {
        housenumber = housenumberfield.getText();
        roadname = roadnamefield.getText();
        phonenumber = phonenumberfield.getText();
-       //DataManipulation.orderDetails(customername, postcode, housenumber, roadname, phonenumber);
        
        
        
-       OrderMain f2= new  OrderMain(customername, postcode, housenumber, roadname, phonenumber);
+       
+       OrderMain f2= new  OrderMain();
        f2.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_AddOrderActionPerformed

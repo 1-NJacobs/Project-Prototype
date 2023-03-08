@@ -27,15 +27,15 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ActiveOrders" min="-2" pref="140" max="-2" attributes="0"/>
+                  <Component id="ActiveOrders1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                   <Component id="CreateOrder" min="-2" pref="140" max="-2" attributes="0"/>
                   <Component id="CheckOrders" min="-2" pref="140" max="-2" attributes="0"/>
-                  <Component id="Reset" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                   <Component id="Exit" min="-2" pref="140" max="-2" attributes="0"/>
+                  <Component id="Reset" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+              <EmptySpace pref="130" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -46,13 +46,13 @@
               <Component id="CreateOrder" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="CheckOrders" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
-              <Component id="ActiveOrders" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="ActiveOrders1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="Reset" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
               <Component id="Exit" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -88,20 +88,20 @@
         <Property name="text" type="java.lang.String" value="Exit"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="ActiveOrders">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Active Orders"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ActiveOrdersActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="Reset">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reset"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResetActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="ActiveOrders1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Active Orders"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ActiveOrders1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -85,11 +85,11 @@ public class DataManipulation {
         return toreturn;
 }
     
-    public static ArrayList<String[]> SearchOrders (){
+    public static ArrayList<String[]> SearchOrders (String search){
         ArrayList<String[]> toreturn = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
             Statement statement=conn.createStatement();
-            String sql = "SELECT * FROM customerInfo";
+            String sql = "SELECT * FROM customerInfo WHERE customername = "+search;
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()){
                 String CustomerID = String.valueOf(rs.getInt("CustomerID"));

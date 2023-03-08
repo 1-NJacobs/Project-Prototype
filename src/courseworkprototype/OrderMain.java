@@ -14,16 +14,11 @@ public class OrderMain extends javax.swing.JFrame {
 
     private static LinkedList order = new LinkedList();
 
-    private static String customername;
-    private static   String postcode;
-    private static   String housenumber;
-    private static   String roadname;
-    private static   String phonenumber;
+    
     /**
      * Creates new form OrderMain
      */
-    public OrderMain(String customername, String postcode, String housenumber, String roadname, String phonenumber) {
-        this.customername = customername;
+    public OrderMain() {
         initComponents();
         
     }
@@ -183,7 +178,7 @@ public class OrderMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void CompleteOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompleteOrderActionPerformed
-        //DataManipulation.orderItems();
+        NewOrder.AddToDB();
         
         DataManipulation.orderItems(order);
         PrototypeGUI f2= new  PrototypeGUI();

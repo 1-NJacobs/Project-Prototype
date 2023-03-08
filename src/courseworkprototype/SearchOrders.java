@@ -220,6 +220,7 @@ public class SearchOrders extends javax.swing.JFrame {
 
     private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
        String search = searchField.getText();
+       DataManipulation.SearchOrders(search);
        //DataManipulation.SearchOrders(search);
     }//GEN-LAST:event_SearchActionPerformed
 
