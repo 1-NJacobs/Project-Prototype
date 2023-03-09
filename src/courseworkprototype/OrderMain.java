@@ -85,7 +85,7 @@ public class OrderMain extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Order:");
+        jTextArea1.setText("Order:"+order);
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton6.setText("Remove");
