@@ -18,7 +18,6 @@ public class SearchOrders extends javax.swing.JFrame {
      */
     public SearchOrders() {
         initComponents();
-        GetOrders();
     }
     
     /**
@@ -124,6 +123,7 @@ public class SearchOrders extends javax.swing.JFrame {
                 "CustomerID", "Name", "Postcode", "HouseNum", "RoadName", "PhoneNum"
             }
         ));
+        GetOrders();
         jScrollPane1.setViewportView(Display);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -204,7 +204,7 @@ public class SearchOrders extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     public void GetOrders(){
-        ArrayList<String[]> TableView = DataManipulation.displayOrders();
+       ArrayList<String[]> TableView = DataManipulation.displayOrders();
        DefaultTableModel tblModel = (DefaultTableModel)Display.getModel();
        tblModel.setRowCount(0);
        for (String[] row : TableView){
@@ -220,7 +220,12 @@ public class SearchOrders extends javax.swing.JFrame {
 
     private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
        String search = searchField.getText();
-       DataManipulation.SearchOrders(search);
+       ArrayList<String[]> TableView = DataManipulation.SearchOrders(search);
+       DefaultTableModel tblModel = (DefaultTableModel)Display.getModel();
+       tblModel.setRowCount(0);
+       for (String[] row : TableView){
+           tblModel.addRow(row);
+       }
        //DataManipulation.SearchOrders(search);
     }//GEN-LAST:event_SearchActionPerformed
 

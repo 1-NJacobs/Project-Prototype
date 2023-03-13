@@ -5,7 +5,6 @@
 package courseworkprototype;
 
 import java.util.LinkedList;
-
 /**
  *
  * @author natja
@@ -181,6 +180,7 @@ public class OrderMain extends javax.swing.JFrame {
         NewOrder.AddToDB();
         
         DataManipulation.orderItems(order);
+        order.clear();
         PrototypeGUI f2= new  PrototypeGUI();
         f2.setVisible(true);
         this.dispose();
