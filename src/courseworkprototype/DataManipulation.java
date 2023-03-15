@@ -89,7 +89,7 @@ public class DataManipulation {
         ArrayList<String[]> toreturn = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
             Statement statement=conn.createStatement();
-            String sql = "SELECT * FROM customerInfo WHERE customername = "+search;
+            String sql = "SELECT * FROM customerInfo WHERE CustomerID = "+search;
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()){
                 String CustomerID = String.valueOf(rs.getInt("CustomerID"));
@@ -109,7 +109,7 @@ public class DataManipulation {
     }
         return toreturn;
 }
-    
+
     public static ArrayList<String[]> OrderItems (LinkedList order){
         ArrayList<String[]> toreturn = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
