@@ -109,6 +109,26 @@ public class DataManipulation {
     }
         return toreturn;
 }
+    
+    public static ArrayList<String[]> OrderItems (LinkedList order){
+        ArrayList<String[]> toreturn = new ArrayList<>();
+        try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
+            Statement statement=conn.createStatement();
+            String sql = "SELECT itemName FROM menu WHERE menuID = "+ order;
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()){
+                String itemName = String.valueOf(rs.getInt("itemName"));
+                String[] menuitems = {itemName};
+                toreturn.add(menuitems);
+                
+            }
+            
+} catch (SQLException ex) {
+            System.out.println(ex);
+    }
+        return toreturn;
+}
+    
 }
     
 
