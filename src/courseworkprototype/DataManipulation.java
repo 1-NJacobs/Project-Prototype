@@ -114,14 +114,19 @@ public class DataManipulation {
         ArrayList<String[]> toreturn = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs",SQL_PASSWORD);) {
             Statement statement=conn.createStatement();
-            String sql = "SELECT itemName FROM menu WHERE menuID = "+ order;
-            ResultSet rs = statement.executeQuery(sql);
-            while (rs.next()){
-                String itemName = String.valueOf(rs.getInt("itemName"));
-                String[] menuitems = {itemName};
-                toreturn.add(menuitems);
-                
+            //LinkedList menuitems = new LinkedList();
+            //String[] menuitems;
+            String[] menuitems = new String[order.size()];
+            for (int i=0; i < order.size() ; i++){
+                String sql = "SELECT itemName FROM menu WHERE menuID = "+ order.get(i);
+                ResultSet rs = statement.executeQuery(sql);
+                String itemName = String.valueOf(rs.getString("itemName"));
+                menuitems[i] = itemName; 
             }
+            
+            toreturn.add(menuitems);
+                
+            
             
 } catch (SQLException ex) {
             System.out.println(ex);

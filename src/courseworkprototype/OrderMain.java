@@ -84,7 +84,7 @@ public class OrderMain extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Order:"+order);
+        jTextArea1.setText("Order:"+ DataManipulation.OrderItems(order));
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton6.setText("Remove");
@@ -243,6 +243,6 @@ public class OrderMain extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
