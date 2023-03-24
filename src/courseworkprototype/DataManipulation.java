@@ -130,5 +130,29 @@ public class DataManipulation {
         }
         return toreturn;
     }
+    
+    public static Float TotalPrice(LinkedList order) {
+        //ArrayList<Float> toreturn = new ArrayList<>();
+        Float Totalprice;
+        Totalprice = 0.00f;
+        try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
+            Statement statement = conn.createStatement();
+            //Float Totalprice;
+            //Totalprice = 0.00f;
+            for (int i = 0; i < order.size(); i++) {
+                String sql = "SELECT price FROM menu WHERE menuID = " + order.get(i);
+                ResultSet rs = statement.executeQuery(sql);
+                if (rs.next()){
+                    Totalprice = Totalprice + rs.getFloat("price");
+
+                }
+                
+            }
+         //toreturn.add(Totalprice);
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+        return Totalprice;
+    }
 
 }
