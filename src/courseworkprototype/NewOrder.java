@@ -175,8 +175,8 @@ public class NewOrder extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void AddToDB(){
-        DataManipulation.orderDetails(customername, postcode, housenumber, roadname, phonenumber);
+    public static void AddToDB(Float price){
+        DataManipulation.orderDetails(customername, postcode, housenumber, roadname, phonenumber, price);
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

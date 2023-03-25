@@ -184,8 +184,9 @@ public class OrderMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void CompleteOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompleteOrderActionPerformed
-        NewOrder.AddToDB();
-        
+        Float price;
+        price = DataManipulation.TotalPrice(order);
+        NewOrder.AddToDB(price);
         DataManipulation.orderItems(order);
         order.clear();
         PrototypeGUI f2= new  PrototypeGUI();

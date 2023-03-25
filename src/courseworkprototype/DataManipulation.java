@@ -25,12 +25,12 @@ public class DataManipulation {
 
     private static final String SQL_PASSWORD = "JLrpC62umv";
 
-    public static void orderDetails(String customername, String postcode, String housenumber, String roadname, String phonenumber) {
+    public static void orderDetails(String customername, String postcode, String housenumber, String roadname, String phonenumber, Float price) {
         // TODO code application logic here
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
             statement.execute("INSERT INTO customerInfo VALUES(null, '" + customername + "','" + postcode + "'," + housenumber + ",'" + roadname + "'," + phonenumber + ");");
-            statement.execute("INSERT INTO OrderTable VALUES (null, (SELECT MAX(customerID) FROM customerInfo));");
+            statement.execute("INSERT INTO OrderTable VALUES (null, (SELECT MAX(customerID) FROM customerInfo), " + price + ");");
         } catch (SQLException ex) {
             System.out.println(ex);
         }
