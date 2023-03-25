@@ -187,7 +187,7 @@ public class OrderMain extends javax.swing.JFrame {
         Float price;
         price = DataManipulation.TotalPrice(order);
         NewOrder.AddToDB(price);
-        DataManipulation.orderItems(order);
+        DataManipulation.EnterOrder(order);
         order.clear();
         PrototypeGUI f2= new  PrototypeGUI();
         f2.setVisible(true);

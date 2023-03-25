@@ -37,7 +37,7 @@ public class DataManipulation {
 
     }
 
-    public static void orderItems(LinkedList order) {
+    public static void EnterOrder(LinkedList order) {
         //TODO code application logic here
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
