@@ -46,6 +46,8 @@ public class NewOrder extends javax.swing.JFrame {
         phonenumberfield = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(51, 51, 51));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setText("Back");
@@ -209,12 +211,28 @@ public class NewOrder extends javax.swing.JFrame {
        roadname = roadnamefield.getText();
        phonenumber = phonenumberfield.getText();
        
+       boolean validated = true;
        
+       int postlength = postcode.length();
+       int phonelength = phonenumber.length();
        
+       if (postlength > 7 && postlength < 5 && phonelength != 11) {
+           validated = false;
+       }
        
-       OrderMain f2= new  OrderMain();
-       f2.setVisible(true);
-       this.dispose();
+       if(customername.isEmpty() && housenumber.isEmpty() && roadname.isEmpty()) {
+           validated = false;
+       }
+       
+       if (validated == true){
+           OrderMain f2= new  OrderMain();
+           f2.setVisible(true);
+           this.dispose();
+       }
+       
+       //OrderMain f2= new  OrderMain();
+       //f2.setVisible(true);
+       //this.dispose();
     }//GEN-LAST:event_AddOrderActionPerformed
 
     private void phonenumberfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phonenumberfieldActionPerformed
