@@ -216,11 +216,13 @@ public class NewOrder extends javax.swing.JFrame {
        int postlength = postcode.length();
        int phonelength = phonenumber.length();
        
-       if (postlength > 7 && postlength < 5 && phonelength != 11) {
+       if (postlength > 7 || postlength < 5 || phonelength != 11) {
            validated = false;
+           LengthCheck f2 = new LengthCheck();
+           f2.setVisible(true);
        }
        
-       if(customername.isEmpty() && housenumber.isEmpty() && roadname.isEmpty()) {
+       if(customername.isEmpty() || housenumber.isEmpty() || roadname.isEmpty() || postcode.isEmpty() || phonenumber.isEmpty()) {
            validated = false;
            PresenceCheck f2 = new PresenceCheck();
            f2.setVisible(true);
