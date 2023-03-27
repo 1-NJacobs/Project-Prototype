@@ -222,6 +222,8 @@ public class NewOrder extends javax.swing.JFrame {
        
        if(customername.isEmpty() && housenumber.isEmpty() && roadname.isEmpty()) {
            validated = false;
+           PresenceCheck f2 = new PresenceCheck();
+           f2.setVisible(true);
        }
        
        if (validated == true){
