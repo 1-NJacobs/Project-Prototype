@@ -65,7 +65,7 @@ public class DataManipulation {
         ArrayList<String[]> toreturn = new ArrayList<>();
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
-            String sql = "SELECT * FROM customerInfo";
+            String sql = "SELECT customerInfo.*, OrderTable.* FROM customerInfo WHERE CustomerInfo.customerID = OrderTable.customerID";
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()) {
                 String CustomerID = String.valueOf(rs.getInt("CustomerID"));
@@ -74,8 +74,10 @@ public class DataManipulation {
                 String HouseNum = String.valueOf(rs.getInt("housenumber"));
                 String RoadName = String.valueOf(rs.getString("roadname"));
                 String PhoneNum = String.valueOf(rs.getInt("phonenumber"));
+                String orderID = String.valueOf(rs.getInt("orderID"));
+                String TotalPrice = String.valueOf()
 
-                String[] tbData = {CustomerID, Name, Postcode, HouseNum, RoadName, PhoneNum};
+                String[] tbData = {CustomerID, Name, Postcode, HouseNum, RoadName, PhoneNum, orderID};
                 toreturn.add(tbData);
 
             }
