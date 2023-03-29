@@ -118,30 +118,35 @@ public class DataManipulation {
     public static ArrayList<String> SelectedOrder(String search) {
         ArrayList<String> toreturn = new ArrayList<>();
         ArrayList<String> menuID = new ArrayList<>();
+        String orderID = "";
+        String Totalprice = "";
+        
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
             
             String sql = "SELECT orderID, totalPrice FROM OrderTable WHERE customerID = " + search;
             ResultSet rs = statement.executeQuery(sql);
-            String orderID = String.valueOf(rs.getInt("orderID"));
-            String Totalprice = String.valueOf(rs.getFloat("totalprice"));
+            if (rs.next()){
+                orderID = String.valueOf(rs.getInt("orderID"));
+                Totalprice = String.valueOf(rs.getFloat("totalprice"));
+            }
             
             String sql2 = "SELECT menuID FROM item WHERE orderID = " + orderID;
-            ResultSet rs2 = statement.executeQuery(sql2);
-            while (rs2.next()) {
-                String menu = String.valueOf(rs2.getFloat("menuID"));
+            rs = statement.executeQuery(sql2);
+            while (rs.next()) {
+                String menu = String.valueOf(rs.getFloat("menuID"));
                 menuID.add(menu);
             }
             
             for (int i = 0; i < menuID.size(); i++) {
                 String sql3 = "SELECT itemName FROM menu WHERE menuID = " + menuID.get(i);
-                ResultSet rs3 = statement.executeQuery(sql3);
-                if (rs3.next()){
+                rs = statement.executeQuery(sql3);
+                if (rs.next()){
                     String itemName = rs.getString("itemName");
                     toreturn.add(itemName);
                 }
             }
-            toreturn.add(Totalprice);
+            toreturn.add("\n £"+Totalprice);
             
             }
 

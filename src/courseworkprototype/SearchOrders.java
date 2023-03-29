@@ -101,6 +101,7 @@ public class SearchOrders extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
+        jTextArea1.setText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane2.setViewportView(jTextArea1);
 
@@ -191,6 +192,7 @@ public class SearchOrders extends javax.swing.JFrame {
             tblModel.setRowCount(0);
             for (String[] row : TableView){
             tblModel.addRow(row);
+            jTextArea1.setText("Order: "+ DataManipulation.SelectedOrder(search));
             }
        
        }
