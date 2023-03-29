@@ -88,11 +88,39 @@ public class DataManipulation {
         return toreturn;
     }
 
-    public static ArrayList<String[]> SearchOrders(String search) {
+    public static ArrayList<String[]> SearchCustomerID(String search) {
         ArrayList<String[]> toreturn = new ArrayList<>();
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
             String sql = "SELECT customerInfo.* , OrderTable.* FROM customerInfo, OrderTable WHERE customerInfo.customerID = OrderTable.customerID AND OrderTable.customerID = " + search;
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                String CustomerID = String.valueOf(rs.getInt("CustomerID"));
+                String Name = String.valueOf(rs.getString("customername"));
+                String Postcode = String.valueOf(rs.getString("postcode"));
+                String HouseNum = String.valueOf(rs.getInt("housenumber"));
+                String RoadName = String.valueOf(rs.getString("roadname"));
+                String PhoneNum = String.valueOf(rs.getInt("phonenumber"));
+                String orderID = String.valueOf(rs.getInt("orderID"));
+                String TotalPrice = String.valueOf(rs.getFloat("totalPrice"));
+
+                String[] tbData = {CustomerID, Name, Postcode, HouseNum, RoadName, PhoneNum, orderID, TotalPrice};
+                toreturn.add(tbData);
+
+            }
+
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+        return toreturn;
+    }
+    
+    public static ArrayList<String[]> SearchCustomerName(String search) { // MAY NOT WORK DELETE IF CANT SEARCH BY CUSTOMER NAME
+        ArrayList<String[]> toreturn = new ArrayList<>();
+        try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
+            Statement statement = conn.createStatement();
+            //String sql = "SELECT customerInfo.* , OrderTable.* FROM customerInfo, OrderTable WHERE customerInfo.customerID = OrderTable.customerID AND customerInfo.customername LIKE %" + search + "%";
+            String sql = "SELECT * FROM customerInfo WHERE customername = "+search;
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()) {
                 String CustomerID = String.valueOf(rs.getInt("CustomerID"));

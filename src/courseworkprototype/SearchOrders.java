@@ -40,6 +40,7 @@ public class SearchOrders extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        Error = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -120,10 +121,12 @@ public class SearchOrders extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(4, 4, 4)
-                .addComponent(searchField)
+                .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Search)
-                .addGap(218, 218, 218)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Error)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(25, 25, 25))
         );
@@ -143,7 +146,8 @@ public class SearchOrders extends javax.swing.JFrame {
                                     .addComponent(Search)
                                     .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Error))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -181,16 +185,18 @@ public class SearchOrders extends javax.swing.JFrame {
 
     private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
        String search = searchField.getText();
-       //if (search.isDigit()){
-           
-       //}
-       ArrayList<String[]> TableView = DataManipulation.SearchOrders(search);
-       DefaultTableModel tblModel = (DefaultTableModel)Display.getModel();
-       tblModel.setRowCount(0);
-       for (String[] row : TableView){
-           tblModel.addRow(row);
+       if (search.matches("[0-9]+") == true){
+            ArrayList<String[]> TableView = DataManipulation.SearchCustomerID(search);
+            DefaultTableModel tblModel = (DefaultTableModel)Display.getModel();
+            tblModel.setRowCount(0);
+            for (String[] row : TableView){
+            tblModel.addRow(row);
+            }
+       
        }
-       //DataManipulation.SearchOrders(search);
+       else{
+            Error.setText("Error: Only Accepts CustomerID");
+       }
     }//GEN-LAST:event_SearchActionPerformed
 
     private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
@@ -234,6 +240,7 @@ public class SearchOrders extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTable Display;
+    private javax.swing.JLabel Error;
     private javax.swing.JButton Search;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
