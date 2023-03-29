@@ -115,29 +115,38 @@ public class DataManipulation {
         return toreturn;
     }
     
-    public static ArrayList<String[]> SearchCustomerName(String search) { // MAY NOT WORK DELETE IF CANT SEARCH BY CUSTOMER NAME
-        ArrayList<String[]> toreturn = new ArrayList<>();
+    public static ArrayList<String> SelectedOrder(String search) {
+        ArrayList<String> toreturn = new ArrayList<>();
+        ArrayList<String> menuID = new ArrayList<>();
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
-            //String sql = "SELECT customerInfo.* , OrderTable.* FROM customerInfo, OrderTable WHERE customerInfo.customerID = OrderTable.customerID AND customerInfo.customername LIKE %" + search + "%";
-            String sql = "SELECT * FROM customerInfo WHERE customername = "+search;
+            
+            String sql = "SELECT orderID, totalPrice FROM OrderTable WHERE customerID = " + search;
             ResultSet rs = statement.executeQuery(sql);
-            while (rs.next()) {
-                String CustomerID = String.valueOf(rs.getInt("CustomerID"));
-                String Name = String.valueOf(rs.getString("customername"));
-                String Postcode = String.valueOf(rs.getString("postcode"));
-                String HouseNum = String.valueOf(rs.getInt("housenumber"));
-                String RoadName = String.valueOf(rs.getString("roadname"));
-                String PhoneNum = String.valueOf(rs.getInt("phonenumber"));
-                String orderID = String.valueOf(rs.getInt("orderID"));
-                String TotalPrice = String.valueOf(rs.getFloat("totalPrice"));
-
-                String[] tbData = {CustomerID, Name, Postcode, HouseNum, RoadName, PhoneNum, orderID, TotalPrice};
-                toreturn.add(tbData);
-
+            String orderID = String.valueOf(rs.getInt("orderID"));
+            Float totalprice = String.valueOf(rs.getFloat("totalprice"));
+            
+            String sql2 = "SELECT menuID FROM item WHERE orderID = " + orderID;
+            ResultSet rs2 = statement.executeQuery(sql2);
+            while (rs2.next()) {
+                String menu = String.valueOf(rs2.getFloat("menuID"));
+                menuID.add(menu);
+            }
+            
+            for (int i = 0; i < menuID.size(); i++) {
+                String sql3 = "SELECT itemName FROM menu WHERE menuID = " + menuID.get(i);
+                ResultSet rs3 = statement.executeQuery(sql3);
+                if (rs3.next()){
+                    String itemName = rs.getString("itemName");
+                    toreturn.add(itemName);
+                }
+            }
+            
+            
+            
             }
 
-        } catch (SQLException ex) {
+            catch (SQLException ex) {
             System.out.println(ex);
         }
         return toreturn;
@@ -164,13 +173,12 @@ public class DataManipulation {
     }
     
     public static Float TotalPrice(LinkedList order) {
-        //ArrayList<Float> toreturn = new ArrayList<>();
+        
         Float Totalprice;
         Totalprice = 0.00f;
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
-            //Float Totalprice;
-            //Totalprice = 0.00f;
+            
             for (int i = 0; i < order.size(); i++) {
                 String sql = "SELECT price FROM menu WHERE menuID = " + order.get(i);
                 ResultSet rs = statement.executeQuery(sql);

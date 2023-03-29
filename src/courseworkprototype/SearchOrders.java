@@ -194,8 +194,11 @@ public class SearchOrders extends javax.swing.JFrame {
             }
        
        }
-       else{
+       else if(search.matches("[0-9]+") == false){
             Error.setText("Error: Only Accepts CustomerID");
+       }
+       if(search.isEmpty()){
+            Error.setText("Error: Search Box Cannot be empty");
        }
     }//GEN-LAST:event_SearchActionPerformed
 
