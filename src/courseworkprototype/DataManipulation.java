@@ -124,7 +124,7 @@ public class DataManipulation {
             String sql = "SELECT orderID, totalPrice FROM OrderTable WHERE customerID = " + search;
             ResultSet rs = statement.executeQuery(sql);
             String orderID = String.valueOf(rs.getInt("orderID"));
-            Float totalprice = String.valueOf(rs.getFloat("totalprice"));
+            String Totalprice = String.valueOf(rs.getFloat("totalprice"));
             
             String sql2 = "SELECT menuID FROM item WHERE orderID = " + orderID;
             ResultSet rs2 = statement.executeQuery(sql2);
@@ -141,8 +141,7 @@ public class DataManipulation {
                     toreturn.add(itemName);
                 }
             }
-            
-            
+            toreturn.add(Totalprice);
             
             }
 
