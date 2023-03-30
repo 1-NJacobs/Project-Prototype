@@ -67,6 +67,8 @@ public class NewOrder extends javax.swing.JFrame {
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(51, 51, 51));
 
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+
         phonenumberfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 phonenumberfieldActionPerformed(evt);

@@ -12,6 +12,7 @@ import javax.swing.table.DefaultTableModel;
  * @author natja
  */
 public class SearchOrders extends javax.swing.JFrame {
+    private static   String search;
 
     /**
      * Creates new form SearchOrders
@@ -36,7 +37,7 @@ public class SearchOrders extends javax.swing.JFrame {
         Search = new javax.swing.JButton();
         searchField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -93,8 +94,13 @@ public class SearchOrders extends javax.swing.JFrame {
 
         jLabel1.setText("Search:");
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("Delete");
+        Delete.setBackground(new java.awt.Color(204, 204, 204));
+        Delete.setText("Delete");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Selected Order: ");
 
@@ -115,7 +121,7 @@ public class SearchOrders extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE))
+                    .addComponent(Delete, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE))
                 .addGap(0, 8, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jButton1)
@@ -137,7 +143,7 @@ public class SearchOrders extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1)
@@ -185,7 +191,7 @@ public class SearchOrders extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
-       String search = searchField.getText();
+       search = searchField.getText();
        if (search.matches("[0-9]+") == true){
             ArrayList<String[]> TableView = DataManipulation.SearchCustomerID(search);
             DefaultTableModel tblModel = (DefaultTableModel)Display.getModel();
@@ -208,6 +214,17 @@ public class SearchOrders extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchFieldActionPerformed
 
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
+        // Open confirmation page and pass on inputted customerID
+        DeleteValidation f2 = new DeleteValidation();
+        f2.setVisible(true);
+    }//GEN-LAST:event_DeleteActionPerformed
+
+    public static void DeleteFromDatabase() {                                       
+        // Open confirmation page and pass on inputted customerID
+        DataManipulation.DeleteSearch(search);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -244,11 +261,11 @@ public class SearchOrders extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Delete;
     public javax.swing.JTable Display;
     private javax.swing.JLabel Error;
     private javax.swing.JButton Search;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel4;
