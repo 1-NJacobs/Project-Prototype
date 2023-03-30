@@ -33,7 +33,6 @@ public class PrototypeGUI extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         CreateOrder = new javax.swing.JButton();
         CheckOrders = new javax.swing.JButton();
-        ActiveOrders1 = new javax.swing.JButton();
         Reset = new javax.swing.JButton();
         Exit = new javax.swing.JButton();
 
@@ -69,13 +68,6 @@ public class PrototypeGUI extends javax.swing.JFrame {
             }
         });
 
-        ActiveOrders1.setText("Active Orders");
-        ActiveOrders1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ActiveOrders1ActionPerformed(evt);
-            }
-        });
-
         Reset.setText("Reset");
         Reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +88,6 @@ public class PrototypeGUI extends javax.swing.JFrame {
                     .addComponent(Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CreateOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CheckOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ActiveOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Reset, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(126, Short.MAX_VALUE))
         );
@@ -108,12 +99,10 @@ public class PrototypeGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(CheckOrders)
                 .addGap(18, 18, 18)
-                .addComponent(ActiveOrders1)
-                .addGap(18, 18, 18)
                 .addComponent(Reset)
                 .addGap(18, 18, 18)
                 .addComponent(Exit)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -146,10 +135,6 @@ public class PrototypeGUI extends javax.swing.JFrame {
         Reset f2 = new Reset();
         f2.setVisible(true);
     }//GEN-LAST:event_ResetActionPerformed
-
-    private void ActiveOrders1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActiveOrders1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ActiveOrders1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,7 +172,6 @@ public class PrototypeGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ActiveOrders1;
     private javax.swing.JButton CheckOrders;
     private javax.swing.JButton CreateOrder;
     private javax.swing.JButton Exit;

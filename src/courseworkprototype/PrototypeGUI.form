@@ -69,7 +69,6 @@
                       <Component id="Exit" min="-2" pref="140" max="-2" attributes="0"/>
                       <Component id="CreateOrder" min="-2" pref="140" max="-2" attributes="0"/>
                       <Component id="CheckOrders" min="-2" pref="140" max="-2" attributes="0"/>
-                      <Component id="ActiveOrders1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                       <Component id="Reset" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="126" max="32767" attributes="0"/>
@@ -84,12 +83,10 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="CheckOrders" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="ActiveOrders1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="Reset" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="Exit" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                  <EmptySpace pref="53" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -115,14 +112,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CheckOrdersActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="ActiveOrders1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Active Orders"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ActiveOrders1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Reset">

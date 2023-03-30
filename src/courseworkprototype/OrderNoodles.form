@@ -23,171 +23,188 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="DuckChow" max="32767" attributes="0"/>
-                  <Component id="PrawnChow" alignment="0" max="32767" attributes="0"/>
-                  <Component id="PorkChow" alignment="0" max="32767" attributes="0"/>
-                  <Component id="BeefChow" alignment="0" max="32767" attributes="0"/>
-                  <Component id="ChickenChow" alignment="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="HouseChow" alignment="0" pref="182" max="32767" attributes="0"/>
-                  <Component id="MixedChow" alignment="0" max="32767" attributes="0"/>
-                  <Component id="FriedChow" alignment="0" max="32767" attributes="0"/>
-                  <Component id="SingaporeChow" alignment="0" max="32767" attributes="0"/>
-                  <Component id="ShrimpChow" alignment="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jButton2" min="-2" pref="31" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="ChickenChow" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ShrimpChow" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BeefChow" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="SingaporeChow" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="PorkChow" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="FriedChow" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="DuckChow" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="MixedChow" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="PrawnChow" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="HouseChow" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="0" pref="55" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="33" green="33" red="33" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="ChickenChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Chicken Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChickenChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="BeefChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Beef Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BeefChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="PorkChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Pork Chow mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PorkChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="DuckChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Shredded Duck Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DuckChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="PrawnChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="King Prawn Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PrawnChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="ShrimpChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Shrimp Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ShrimpChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="SingaporeChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Singapore Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SingaporeChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="FriedChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Fried Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FriedChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="MixedChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mixed Meat Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MixedChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="HouseChow">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="House Special Chow Mein"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HouseChowActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Noodle Dishes"/>
-      </Properties>
-    </Component>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="DuckChow" max="32767" attributes="0"/>
+                      <Component id="PrawnChow" alignment="0" max="32767" attributes="0"/>
+                      <Component id="PorkChow" alignment="0" max="32767" attributes="0"/>
+                      <Component id="BeefChow" alignment="0" max="32767" attributes="0"/>
+                      <Component id="ChickenChow" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="MixedChow" alignment="0" max="32767" attributes="0"/>
+                      <Component id="FriedChow" alignment="0" max="32767" attributes="0"/>
+                      <Component id="SingaporeChow" alignment="0" max="32767" attributes="0"/>
+                      <Component id="ShrimpChow" alignment="0" max="32767" attributes="0"/>
+                      <Component id="HouseChow" pref="174" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton2" min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ChickenChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ShrimpChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BeefChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SingaporeChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="PorkChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="FriedChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="DuckChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="MixedChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="PrawnChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="HouseChow" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="jButton2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Back"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Noodle Dishes"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="SingaporeChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Singapore Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SingaporeChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="FriedChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fried Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FriedChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="MixedChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mixed Meat Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MixedChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="HouseChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="House Special Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HouseChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="ChickenChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Chicken Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChickenChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="BeefChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Beef Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BeefChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="PorkChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pork Chow mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PorkChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="DuckChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Shredded Duck Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DuckChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="PrawnChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="King Prawn Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PrawnChowActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="ShrimpChow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Shrimp Chow Mein"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ShrimpChowActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

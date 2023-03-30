@@ -26,7 +26,7 @@ public class DataManipulation {
     private static final String SQL_PASSWORD = "JLrpC62umv";
 
     public static void orderDetails(String customername, String postcode, String housenumber, String roadname, String phonenumber, Float price) {
-        // TODO code application logic here
+        // Enters all the customer details and order price int the database
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
             statement.execute("INSERT INTO customerInfo VALUES(null, '" + customername + "','" + postcode + "'," + housenumber + ",'" + roadname + "'," + phonenumber + ");");
@@ -38,7 +38,7 @@ public class DataManipulation {
     }
 
     public static void EnterOrder(LinkedList order) {
-        //TODO code application logic here
+        // Enters all the items in the order into the database
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
             for (int i = 0; i < order.size(); i++) {
@@ -50,6 +50,7 @@ public class DataManipulation {
     }
 
     public static void resetDB() {
+        // Reset the database, clear all values in all tables except the menu table as that holds the item names and prices and doesn't get added to
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
             statement.execute("DELETE FROM OrderTable;");
@@ -62,6 +63,7 @@ public class DataManipulation {
     }
 
     public static ArrayList<String[]> displayOrders() {
+        // Retrieve all of customer details and totaal price to be displayed in the search order table
         ArrayList<String[]> toreturn = new ArrayList<>();
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
@@ -89,6 +91,7 @@ public class DataManipulation {
     }
 
     public static ArrayList<String[]> SearchCustomerID(String search) {
+        // Search the database by customerID and retrieve all details matching that customerID
         ArrayList<String[]> toreturn = new ArrayList<>();
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
@@ -116,6 +119,7 @@ public class DataManipulation {
     }
     
     public static ArrayList<String> SelectedOrder(String search) {
+        // Retrieve the order items and price from custoemrID
         ArrayList<String> toreturn = new ArrayList<>();
         ArrayList<String> menuID = new ArrayList<>();
         String orderID = "";
@@ -130,14 +134,14 @@ public class DataManipulation {
                 orderID = String.valueOf(rs.getInt("orderID"));
                 Totalprice = String.valueOf(rs.getFloat("totalprice"));
             }
-            
+            // gets the orderID and total price
             String sql2 = "SELECT menuID FROM item WHERE orderID = " + orderID;
             rs = statement.executeQuery(sql2);
             while (rs.next()) {
-                String menu = String.valueOf(rs.getFloat("menuID"));
+                String menu = String.valueOf(rs.getInt("menuID"));
                 menuID.add(menu);
             }
-            
+            // Gets the menuID of all items in the order
             for (int i = 0; i < menuID.size(); i++) {
                 String sql3 = "SELECT itemName FROM menu WHERE menuID = " + menuID.get(i);
                 rs = statement.executeQuery(sql3);
@@ -146,8 +150,9 @@ public class DataManipulation {
                     toreturn.add(itemName);
                 }
             }
+            // retrieves all item names of items in order
             toreturn.add("\n £"+Totalprice);
-            
+            // adds the total price to the end of the array
             }
 
             catch (SQLException ex) {
@@ -157,6 +162,7 @@ public class DataManipulation {
     }
 
     public static ArrayList<String> OrderItems(LinkedList order) {
+        // Retrrieve the item names of the items selected in the order
         ArrayList<String> toreturn = new ArrayList<>();
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
@@ -177,7 +183,7 @@ public class DataManipulation {
     }
     
     public static Float TotalPrice(LinkedList order) {
-        
+        // Calculates the total price of items in the order
         Float Totalprice;
         Totalprice = 0.00f;
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
