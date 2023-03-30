@@ -100,6 +100,7 @@ public class DeleteValidation extends javax.swing.JFrame {
     private void YesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesActionPerformed
         // Delete record from database
         SearchOrders.DeleteFromDatabase();
+        
         this.dispose();
     }//GEN-LAST:event_YesActionPerformed
 

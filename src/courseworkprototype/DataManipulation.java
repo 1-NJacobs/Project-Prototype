@@ -207,11 +207,15 @@ public class DataManipulation {
     
     public static void DeleteSearch(String search) {
         // Reset the database, clear all values in all tables except the menu table as that holds the item names and prices and doesn't get added to
+        String orderID = "";
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
             String sql = "SELECT orderID FROM OrderTable WHERE customerID = " + search;
-            ResultSet OrderID = statement.executeQuery(sql);
-            statement.execute("DELETE FROM item WHERE orderID = "+ OrderID +";");
+            ResultSet rs = statement.executeQuery(sql);
+            if (rs.next()){
+                orderID = rs.getString("orderID");
+            }
+            statement.execute("DELETE FROM item WHERE orderID = "+ orderID +";");
             statement.execute("DELETE FROM OrderTable WHERE customerID = " + search + ";");
             statement.execute("DELETE FROM customerInfo WHERE customerID = " + search + ";");
         } catch (SQLException ex) {
