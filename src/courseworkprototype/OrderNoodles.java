@@ -194,6 +194,7 @@ public class OrderNoodles extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+// Go to previous page
         OrderMain f2= new  OrderMain();
         f2.setVisible(true);
         this.dispose();
