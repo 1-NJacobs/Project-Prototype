@@ -44,7 +44,7 @@ public class NewOrder extends javax.swing.JFrame {
         customernamefield = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         PhoneError = new javax.swing.JLabel();
         AddOrder = new javax.swing.JButton();
         RoadError = new javax.swing.JLabel();
@@ -126,11 +126,11 @@ public class NewOrder extends javax.swing.JFrame {
 
         jLabel1.setText("Customer Details");
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Back.setBackground(new java.awt.Color(204, 204, 204));
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
 
@@ -147,7 +147,7 @@ public class NewOrder extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addComponent(Back)
                 .addGap(112, 112, 112)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -197,7 +197,7 @@ public class NewOrder extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
@@ -255,6 +255,7 @@ public class NewOrder extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AddOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddOrderActionPerformed
+        // Runs all the validation routines and if its all correct it will open the next page to finish the order (adding items, etc)
         customername = customernamefield.getText();
         postcode = postcodefield.getText();
         housenumber = housenumberfield.getText();
@@ -272,61 +273,58 @@ public class NewOrder extends javax.swing.JFrame {
         }else{
             PostError.setText("");
         }
-
+// Checks postcode is the right length and outputs error message if it is
         if (phonelength != 11) {
             validated = false;
             PhoneError.setText("Error: Phone Number must be 11 digits");
         }else{
             PhoneError.setText("");
         }
-
+//Checks phone number is the right length and outputs error message if it is
         if(customername.isEmpty()) {
             validated = false;
             CustomerError.setText("Error: CustomerName cannot be empty");
         }else{
             CustomerError.setText("");
         }
-
+// Checks customerName isn't empty and outputs error message if it is
         if(housenumber.isEmpty()) {
             validated = false;
             HouseError.setText("Error: HouseNumber cannot be empty");
         }else{
             HouseError.setText("");
         }
-
+// Checks house number is not empty and outputs error message if it is
         if(roadname.isEmpty()) {
             validated = false;
             RoadError.setText("Error: RoadName cannot be empty");
         }else{
             RoadError.setText("");
         }
-
+// Checks roadname is not empty and outputs error message if it is
         if(postcode.isEmpty()) {
             validated = false;
             PostError.setText("Error: PostCode cannot be empty");
         }
-
+// checks postcode is not empty and outputs error message if it is
         if(phonenumber.isEmpty()) {
             validated = false;
             PhoneError.setText("Error: PhoneNumber cannot be empty");
         }
-
+// checks phone number is not empty and outputs error message if it is
         if (validated == true){
             OrderMain f2= new  OrderMain();
             f2.setVisible(true);
             this.dispose();
         }
-
-        //OrderMain f2= new  OrderMain();
-        //f2.setVisible(true);
-        //this.dispose();
+// open the next page if all validation is correct
     }//GEN-LAST:event_AddOrderActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         PrototypeGUI f2= new  PrototypeGUI();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
     private void customernamefieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customernamefieldActionPerformed
         // TODO add your handling code here:
@@ -346,6 +344,7 @@ public class NewOrder extends javax.swing.JFrame {
     }//GEN-LAST:event_roadnamefieldActionPerformed
 
     private void phonenumberfieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phonenumberfieldKeyPressed
+// Data type Validation
         char c = evt.getKeyChar();
         if(Character.isLetter(c)){
             phonenumberfield.setEditable(false);
@@ -362,6 +361,7 @@ public class NewOrder extends javax.swing.JFrame {
     }//GEN-LAST:event_phonenumberfieldActionPerformed
 
     private void customernamefieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_customernamefieldKeyPressed
+// Data type Validation
         int c = evt.getKeyChar();
         if(Character.isDigit(c)){
             CustomerError.setText("Error: customer name only accepts characters");
@@ -426,6 +426,7 @@ public class NewOrder extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddOrder;
+    private javax.swing.JButton Back;
     private javax.swing.JLabel CustomerError;
     private javax.swing.JLabel HouseError;
     private javax.swing.JLabel PhoneError;
@@ -433,7 +434,6 @@ public class NewOrder extends javax.swing.JFrame {
     private javax.swing.JLabel RoadError;
     private javax.swing.JTextField customernamefield;
     private javax.swing.JTextField housenumberfield;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
