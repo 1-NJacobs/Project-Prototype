@@ -374,6 +374,7 @@ public class NewOrder extends javax.swing.JFrame {
     }//GEN-LAST:event_customernamefieldKeyPressed
 
     private void roadnamefieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_roadnamefieldKeyPressed
+// Data type Valdiation
         int c = evt.getKeyChar();
         if(Character.isDigit(c)){
             RoadError.setText("Error: roadname only accepts characters");
@@ -386,6 +387,7 @@ public class NewOrder extends javax.swing.JFrame {
     }//GEN-LAST:event_roadnamefieldKeyPressed
 
     public static void AddToDB(Float price){
+        //Add to the database
         DataManipulation.orderDetails(customername, postcode, housenumber, roadname, phonenumber, price);
     }
     

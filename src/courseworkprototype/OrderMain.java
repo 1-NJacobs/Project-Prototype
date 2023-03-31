@@ -32,13 +32,13 @@ public class OrderMain extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         CompleteOrder = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        NoodelDishes = new javax.swing.JButton();
+        RiceDishes = new javax.swing.JButton();
+        CurryDishes = new javax.swing.JButton();
+        VegetarianMeals = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         Remove = new javax.swing.JButton();
@@ -47,11 +47,11 @@ public class OrderMain extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Back.setBackground(new java.awt.Color(204, 204, 204));
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
 
@@ -65,31 +65,31 @@ public class OrderMain extends javax.swing.JFrame {
 
         jLabel1.setText("Type of food");
 
-        jButton1.setText("Noodle Dishes");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        NoodelDishes.setText("Noodle Dishes");
+        NoodelDishes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                NoodelDishesActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Rice Dishes");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        RiceDishes.setText("Rice Dishes");
+        RiceDishes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                RiceDishesActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Curry Dishes");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        CurryDishes.setText("Curry Dishes");
+        CurryDishes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                CurryDishesActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Vegetarian meals");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        VegetarianMeals.setText("Vegetarian meals");
+        VegetarianMeals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                VegetarianMealsActionPerformed(evt);
             }
         });
 
@@ -114,7 +114,7 @@ public class OrderMain extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(Back)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -123,13 +123,13 @@ public class OrderMain extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                     .addContainerGap()
-                                    .addComponent(jButton5))
+                                    .addComponent(VegetarianMeals))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGap(59, 59, 59)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(RiceDishes, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(NoodelDishes, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(CurryDishes, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGap(56, 56, 56)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(10, Short.MAX_VALUE))
@@ -143,16 +143,16 @@ public class OrderMain extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1))
                         .addGap(30, 30, 30)
-                        .addComponent(jButton1)
+                        .addComponent(NoodelDishes)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
+                        .addComponent(RiceDishes)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)
+                        .addComponent(CurryDishes)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5))
+                        .addComponent(VegetarianMeals))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Remove)
@@ -175,32 +175,36 @@ public class OrderMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public static void orderList(int menuID){
-        
+// This adds the menuID of items selected to linked list
         order.add(menuID);
         
         System.out.println(order);
         
     }
     
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+// This will go back to the previouse page
         NewOrder f2= new  NewOrder();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void NoodelDishesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoodelDishesActionPerformed
+// Opens Noodles Page
         OrderNoodles f2= new  OrderNoodles();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_NoodelDishesActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void CurryDishesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurryDishesActionPerformed
+// Opens Curry Page
         OrderCurry f2= new  OrderCurry();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_CurryDishesActionPerformed
 
     private void CompleteOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompleteOrderActionPerformed
+// Add all data to Database
         Float price;
         price = DataManipulation.TotalPrice(order);
         NewOrder.AddToDB(price);
@@ -211,19 +215,22 @@ public class OrderMain extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_CompleteOrderActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void RiceDishesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RiceDishesActionPerformed
+// Opens Rice Page
         OrderRice f2= new  OrderRice();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_RiceDishesActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void VegetarianMealsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VegetarianMealsActionPerformed
+// Opens Vegetarian page
         OrderVegetarian f2= new  OrderVegetarian();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_VegetarianMealsActionPerformed
 
     private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
+// Removes Item from Linked List
         order.remove((order.size()-1));
         OrderMain f2 = new OrderMain();
         f2.setVisible(true);
@@ -266,13 +273,13 @@ public class OrderMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
     private javax.swing.JButton CompleteOrder;
+    private javax.swing.JButton CurryDishes;
+    private javax.swing.JButton NoodelDishes;
     private javax.swing.JButton Remove;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton RiceDishes;
+    private javax.swing.JButton VegetarianMeals;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
