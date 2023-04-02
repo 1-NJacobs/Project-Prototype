@@ -176,8 +176,6 @@ public class OrderMain extends javax.swing.JFrame {
 // This adds the menuID of items selected to linked list
         order.add(menuID);
         
-        System.out.println(order);
-        
     }
     
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
