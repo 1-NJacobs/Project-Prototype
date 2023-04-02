@@ -210,7 +210,7 @@ public class OrderMain extends javax.swing.JFrame {
         NewOrder.AddToDB(price);
         DataManipulation.EnterOrder(order);
         order.clear();
-        PrototypeGUI f2= new  PrototypeGUI();
+        HomeScreen f2= new  HomeScreen();
         f2.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_CompleteOrderActionPerformed

@@ -321,7 +321,7 @@ public class NewOrder extends javax.swing.JFrame {
     }//GEN-LAST:event_AddOrderActionPerformed
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
-        PrototypeGUI f2= new  PrototypeGUI();
+        HomeScreen f2= new  HomeScreen();
         f2.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BackActionPerformed
