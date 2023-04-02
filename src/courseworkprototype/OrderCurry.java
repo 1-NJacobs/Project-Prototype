@@ -212,52 +212,52 @@ public class OrderCurry extends javax.swing.JFrame {
     }//GEN-LAST:event_BackActionPerformed
 
     private void ShrimpCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShrimpCurryActionPerformed
-        int menuID = 20;
+        int menuID = 30;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_ShrimpCurryActionPerformed
 
     private void ChickenCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenCurryActionPerformed
-        int menuID = 11;
+        int menuID = 21;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_ChickenCurryActionPerformed
 
     private void BeefCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeefCurryActionPerformed
-        int menuID = 12;
+        int menuID = 22;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_BeefCurryActionPerformed
 
     private void LambCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LambCurryActionPerformed
-        int menuID = 13;
+        int menuID = 23;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_LambCurryActionPerformed
 
     private void MushroomCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MushroomCurryActionPerformed
-        int menuID = 14;
+        int menuID = 24;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_MushroomCurryActionPerformed
 
     private void KingPrawnCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KingPrawnCurryActionPerformed
-        int menuID = 15;
+        int menuID = 25;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_KingPrawnCurryActionPerformed
 
     private void RoastPorkCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoastPorkCurryActionPerformed
-        int menuID = 16;
+        int menuID = 26;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_RoastPorkCurryActionPerformed
 
     private void VegetableCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VegetableCurryActionPerformed
-        int menuID = 17;
+        int menuID = 27;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_VegetableCurryActionPerformed
 
     private void SweetCornCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SweetCornCurryActionPerformed
-        int menuID = 18;
+        int menuID = 28;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_SweetCornCurryActionPerformed
 
     private void MixedMeatCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MixedMeatCurryActionPerformed
-        int menuID = 19;
+        int menuID = 29;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_MixedMeatCurryActionPerformed
 

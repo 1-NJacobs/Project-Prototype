@@ -202,52 +202,52 @@ public class OrderRice extends javax.swing.JFrame {
     }//GEN-LAST:event_BackActionPerformed
 
     private void KingPrawnFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KingPrawnFriedRiceActionPerformed
-        int menuID = 23;
+        int menuID = 13;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_KingPrawnFriedRiceActionPerformed
 
     private void MushroomFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MushroomFriedRiceActionPerformed
-        int menuID = 26;
+        int menuID = 16;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_MushroomFriedRiceActionPerformed
 
     private void ShreddedDickFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShreddedDickFriedRiceActionPerformed
-        int menuID = 30;
+        int menuID = 20;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_ShreddedDickFriedRiceActionPerformed
 
     private void ChickenFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenFriedRiceActionPerformed
-        int menuID = 21;
+        int menuID = 11;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_ChickenFriedRiceActionPerformed
 
     private void BeefFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeefFriedRiceActionPerformed
-        int menuID = 22;
+        int menuID = 12;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_BeefFriedRiceActionPerformed
 
     private void ShrimpFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShrimpFriedRiceActionPerformed
-        int menuID = 24;
+        int menuID = 14;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_ShrimpFriedRiceActionPerformed
 
     private void SingaporeFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingaporeFriedRiceActionPerformed
-        int menuID = 25;
+        int menuID = 15;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_SingaporeFriedRiceActionPerformed
 
     private void SweetCornFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SweetCornFriedRiceActionPerformed
-        int menuID = 27;
+        int menuID = 17;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_SweetCornFriedRiceActionPerformed
 
     private void EggFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EggFriedRiceActionPerformed
-        int menuID = 28;
+        int menuID = 18;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_EggFriedRiceActionPerformed
 
     private void YungChowFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YungChowFriedRiceActionPerformed
-        int menuID = 29;
+        int menuID = 19;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_YungChowFriedRiceActionPerformed
 

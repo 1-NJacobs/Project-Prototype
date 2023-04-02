@@ -221,7 +221,7 @@ public class OrderVegetarian extends javax.swing.JFrame {
     }//GEN-LAST:event_VegetableChowMeinActionPerformed
 
     private void VegetableCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VegetableCurryActionPerformed
-        int menuID = 32;
+        int menuID = 28;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_VegetableCurryActionPerformed
 
@@ -236,7 +236,7 @@ public class OrderVegetarian extends javax.swing.JFrame {
     }//GEN-LAST:event_MushroomChowMeinActionPerformed
 
     private void MushroomCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MushroomCurryActionPerformed
-        int menuID = 36;
+        int menuID = 24;
         OrderMain.orderList(menuID);
     }//GEN-LAST:event_MushroomCurryActionPerformed
 
