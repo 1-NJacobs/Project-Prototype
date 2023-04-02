@@ -33,7 +33,7 @@ public class SearchOrders extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Display = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         Search = new javax.swing.JButton();
         searchField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -72,11 +72,11 @@ public class SearchOrders extends javax.swing.JFrame {
         GetOrders();
         jScrollPane1.setViewportView(Display);
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Back.setBackground(new java.awt.Color(204, 204, 204));
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
 
@@ -133,7 +133,7 @@ public class SearchOrders extends javax.swing.JFrame {
                     .addComponent(Refresh, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(0, 8, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addComponent(Back)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(4, 4, 4)
@@ -150,7 +150,7 @@ public class SearchOrders extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
+                    .addComponent(Back)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -193,11 +193,11 @@ public class SearchOrders extends javax.swing.JFrame {
        }
     }
     
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         PrototypeGUI f2= new  PrototypeGUI();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
     private void SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchActionPerformed
        search = searchField.getText();
@@ -277,12 +277,12 @@ public class SearchOrders extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
     private javax.swing.JButton Delete;
     public javax.swing.JTable Display;
     private javax.swing.JLabel Error;
     private javax.swing.JButton Refresh;
     private javax.swing.JButton Search;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel4;

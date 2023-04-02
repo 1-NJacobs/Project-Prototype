@@ -28,7 +28,7 @@ public class Reset extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         ResetDataBase = new javax.swing.JButton();
 
@@ -36,10 +36,10 @@ public class Reset extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
 
@@ -64,7 +64,7 @@ public class Reset extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(ResetDataBase, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10))
         );
         jPanel1Layout.setVerticalGroup(
@@ -75,7 +75,7 @@ public class Reset extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ResetDataBase)
-                    .addComponent(jButton1))
+                    .addComponent(Back))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -93,9 +93,9 @@ public class Reset extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
     private void ResetDataBaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetDataBaseActionPerformed
         DataManipulation.resetDB();
@@ -138,8 +138,8 @@ public class Reset extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
     private javax.swing.JButton ResetDataBase;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

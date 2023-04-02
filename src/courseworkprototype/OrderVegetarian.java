@@ -31,7 +31,7 @@ public class OrderVegetarian extends javax.swing.JFrame {
         TofuChowMein = new javax.swing.JButton();
         SpicyVegetableCurry = new javax.swing.JButton();
         SpicyVegetableChowMein = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         VegetableChowMein = new javax.swing.JButton();
         VegetableCurry = new javax.swing.JButton();
@@ -72,11 +72,11 @@ public class OrderVegetarian extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Back.setBackground(new java.awt.Color(204, 204, 204));
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
 
@@ -129,7 +129,7 @@ public class OrderVegetarian extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton2)
+                .addComponent(Back)
                 .addGap(116, 116, 116)
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -160,7 +160,7 @@ public class OrderVegetarian extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -199,11 +199,11 @@ public class OrderVegetarian extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         OrderMain f2= new  OrderMain();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
     private void FakeChickenCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FakeChickenCurryActionPerformed
         int menuID = 33;
@@ -291,6 +291,7 @@ public class OrderVegetarian extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
     private javax.swing.JButton FakeChickenChowMein;
     private javax.swing.JButton FakeChickenCurry;
     private javax.swing.JButton MushroomChowMein;
@@ -301,7 +302,6 @@ public class OrderVegetarian extends javax.swing.JFrame {
     private javax.swing.JButton TofuCurry;
     private javax.swing.JButton VegetableChowMein;
     private javax.swing.JButton VegetableCurry;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

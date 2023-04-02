@@ -162,7 +162,7 @@ public class DataManipulation {
     }
 
     public static ArrayList<String> OrderItems(LinkedList order) {
-        // Retrrieve the item names of the items selected in the order
+        // Retrieve the item names of the items selected in the order
         ArrayList<String> toreturn = new ArrayList<>();
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
@@ -206,7 +206,7 @@ public class DataManipulation {
     }
     
     public static void DeleteSearch(String search) {
-        // Reset the database, clear all values in all tables except the menu table as that holds the item names and prices and doesn't get added to
+        // removes any records that match the search
         String orderID = "";
         try ( Connection conn = DriverManager.getConnection(CONNECTION_STRING, "NJacobs", SQL_PASSWORD);) {
             Statement statement = conn.createStatement();
