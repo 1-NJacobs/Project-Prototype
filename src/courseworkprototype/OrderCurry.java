@@ -28,18 +28,18 @@ public class OrderCurry extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton11 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        MixedMeatCurry = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        ChickenCurry = new javax.swing.JButton();
+        BeefCurry = new javax.swing.JButton();
+        LambCurry = new javax.swing.JButton();
+        MushroomCurry = new javax.swing.JButton();
+        KingPrawnCurry = new javax.swing.JButton();
+        ShrimpCurry = new javax.swing.JButton();
+        RoastPorkCurry = new javax.swing.JButton();
+        VegetableCurry = new javax.swing.JButton();
+        SweetCornCurry = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -56,93 +56,138 @@ public class OrderCurry extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
-        jButton11.setText("Mixed Meat Curry");
-
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        MixedMeatCurry.setText("Mixed Meat Curry");
+        MixedMeatCurry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                MixedMeatCurryActionPerformed(evt);
+            }
+        });
+
+        Back.setBackground(new java.awt.Color(204, 204, 204));
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackActionPerformed(evt);
             }
         });
 
         jLabel1.setText("Curry Dishes");
 
-        jButton1.setText("Chicken Curry");
-
-        jButton3.setText("Beef Curry");
-
-        jButton4.setText("Lamb Curry");
-
-        jButton5.setText("Mushroom Curry");
-
-        jButton6.setText("King Prawn Curry");
-
-        jButton7.setText("Shrimp Curry");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        ChickenCurry.setText("Chicken Curry");
+        ChickenCurry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                ChickenCurryActionPerformed(evt);
             }
         });
 
-        jButton8.setText("Roast Pork Curry");
+        BeefCurry.setText("Beef Curry");
+        BeefCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BeefCurryActionPerformed(evt);
+            }
+        });
 
-        jButton9.setText("Vegetable Curry");
+        LambCurry.setText("Lamb Curry");
+        LambCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LambCurryActionPerformed(evt);
+            }
+        });
 
-        jButton10.setText("Sweet Corn Curry");
+        MushroomCurry.setText("Mushroom Curry");
+        MushroomCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MushroomCurryActionPerformed(evt);
+            }
+        });
+
+        KingPrawnCurry.setText("King Prawn Curry");
+        KingPrawnCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KingPrawnCurryActionPerformed(evt);
+            }
+        });
+
+        ShrimpCurry.setText("Shrimp Curry");
+        ShrimpCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShrimpCurryActionPerformed(evt);
+            }
+        });
+
+        RoastPorkCurry.setText("Roast Pork Curry");
+        RoastPorkCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RoastPorkCurryActionPerformed(evt);
+            }
+        });
+
+        VegetableCurry.setText("Vegetable Curry");
+        VegetableCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VegetableCurryActionPerformed(evt);
+            }
+        });
+
+        SweetCornCurry.setText("Sweet Corn Curry");
+        SweetCornCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SweetCornCurryActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jButton2)
+                .addComponent(Back)
                 .addGap(129, 129, 129)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
+                    .addComponent(MushroomCurry, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LambCurry, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ChickenCurry, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BeefCurry, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(KingPrawnCurry, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
+                    .addComponent(ShrimpCurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RoastPorkCurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(VegetableCurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SweetCornCurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MixedMeatCurry, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
                 .addGap(33, 33, 33))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton7))
+                    .addComponent(ChickenCurry)
+                    .addComponent(ShrimpCurry))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
-                    .addComponent(jButton3))
+                    .addComponent(RoastPorkCurry)
+                    .addComponent(BeefCurry))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9)
-                    .addComponent(jButton4))
+                    .addComponent(VegetableCurry)
+                    .addComponent(LambCurry))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton10))
+                    .addComponent(MushroomCurry)
+                    .addComponent(SweetCornCurry))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton11)
-                    .addComponent(jButton6))
+                    .addComponent(MixedMeatCurry)
+                    .addComponent(KingPrawnCurry))
                 .addGap(0, 31, Short.MAX_VALUE))
         );
 
@@ -160,15 +205,61 @@ public class OrderCurry extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         OrderMain f2= new  OrderMain();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void ShrimpCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShrimpCurryActionPerformed
+        int menuID = 20;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_ShrimpCurryActionPerformed
+
+    private void ChickenCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenCurryActionPerformed
+        int menuID = 11;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_ChickenCurryActionPerformed
+
+    private void BeefCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeefCurryActionPerformed
+        int menuID = 12;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_BeefCurryActionPerformed
+
+    private void LambCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LambCurryActionPerformed
+        int menuID = 13;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_LambCurryActionPerformed
+
+    private void MushroomCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MushroomCurryActionPerformed
+        int menuID = 14;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_MushroomCurryActionPerformed
+
+    private void KingPrawnCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KingPrawnCurryActionPerformed
+        int menuID = 15;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_KingPrawnCurryActionPerformed
+
+    private void RoastPorkCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoastPorkCurryActionPerformed
+        int menuID = 16;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_RoastPorkCurryActionPerformed
+
+    private void VegetableCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VegetableCurryActionPerformed
+        int menuID = 17;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_VegetableCurryActionPerformed
+
+    private void SweetCornCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SweetCornCurryActionPerformed
+        int menuID = 18;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_SweetCornCurryActionPerformed
+
+    private void MixedMeatCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MixedMeatCurryActionPerformed
+        int menuID = 19;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_MixedMeatCurryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,17 +298,17 @@ public class OrderCurry extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton Back;
+    private javax.swing.JButton BeefCurry;
+    private javax.swing.JButton ChickenCurry;
+    private javax.swing.JButton KingPrawnCurry;
+    private javax.swing.JButton LambCurry;
+    private javax.swing.JButton MixedMeatCurry;
+    private javax.swing.JButton MushroomCurry;
+    private javax.swing.JButton RoastPorkCurry;
+    private javax.swing.JButton ShrimpCurry;
+    private javax.swing.JButton SweetCornCurry;
+    private javax.swing.JButton VegetableCurry;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

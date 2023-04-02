@@ -27,62 +27,102 @@ public class OrderRice extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        KingPrawnFriedRice = new javax.swing.JButton();
+        ShrimpFriedRice = new javax.swing.JButton();
+        SingaporeFriedRice = new javax.swing.JButton();
+        MushroomFriedRice = new javax.swing.JButton();
+        SweetCornFriedRice = new javax.swing.JButton();
+        EggFriedRice = new javax.swing.JButton();
+        YungChowFriedRice = new javax.swing.JButton();
+        ShreddedDickFriedRice = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        ChickenFriedRice = new javax.swing.JButton();
+        BeefFriedRice = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jButton4.setText("King Prawn Fried Rice");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        KingPrawnFriedRice.setText("King Prawn Fried Rice");
+        KingPrawnFriedRice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                KingPrawnFriedRiceActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Shrimp Fried Rice");
-
-        jButton6.setText("Singapore Fried Rice");
-
-        jButton7.setText("Mushroom Fried Rice");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        ShrimpFriedRice.setText("Shrimp Fried Rice");
+        ShrimpFriedRice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                ShrimpFriedRiceActionPerformed(evt);
             }
         });
 
-        jButton8.setText("Sweet Corn Fried Rice");
-
-        jButton9.setText("Egg Fried Rice");
-
-        jButton10.setText("Yung Chow Fried Rice");
-
-        jButton11.setText("Shreedded Duck Fried Rice");
-
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        SingaporeFriedRice.setText("Singapore Fried Rice");
+        SingaporeFriedRice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SingaporeFriedRiceActionPerformed(evt);
+            }
+        });
+
+        MushroomFriedRice.setText("Mushroom Fried Rice");
+        MushroomFriedRice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MushroomFriedRiceActionPerformed(evt);
+            }
+        });
+
+        SweetCornFriedRice.setText("Sweet Corn Fried Rice");
+        SweetCornFriedRice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SweetCornFriedRiceActionPerformed(evt);
+            }
+        });
+
+        EggFriedRice.setText("Egg Fried Rice");
+        EggFriedRice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EggFriedRiceActionPerformed(evt);
+            }
+        });
+
+        YungChowFriedRice.setText("Yung Chow Fried Rice");
+        YungChowFriedRice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                YungChowFriedRiceActionPerformed(evt);
+            }
+        });
+
+        ShreddedDickFriedRice.setText("Shredded Duck Fried Rice");
+        ShreddedDickFriedRice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShreddedDickFriedRiceActionPerformed(evt);
+            }
+        });
+
+        Back.setBackground(new java.awt.Color(204, 204, 204));
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackActionPerformed(evt);
             }
         });
 
         jLabel1.setText("Rice Dishes");
 
-        jButton1.setText("Chicken Fried Rice");
+        ChickenFriedRice.setText("Chicken Fried Rice");
+        ChickenFriedRice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChickenFriedRiceActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Beef Fried Rice");
+        BeefFriedRice.setText("Beef Fried Rice");
+        BeefFriedRice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BeefFriedRiceActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -93,20 +133,20 @@ public class OrderRice extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(ShrimpFriedRice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(KingPrawnFriedRice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                            .addComponent(BeefFriedRice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ChickenFriedRice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SingaporeFriedRice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                            .addComponent(jButton11)))
+                            .addComponent(MushroomFriedRice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SweetCornFriedRice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(EggFriedRice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(YungChowFriedRice, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                            .addComponent(ShreddedDickFriedRice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(Back)
                         .addGap(132, 132, 132)
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -116,28 +156,28 @@ public class OrderRice extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1))
+                    .addComponent(MushroomFriedRice, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ChickenFriedRice))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton8))
+                    .addComponent(BeefFriedRice)
+                    .addComponent(SweetCornFriedRice))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton4))
+                    .addComponent(EggFriedRice, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(KingPrawnFriedRice))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton10))
+                    .addComponent(ShrimpFriedRice)
+                    .addComponent(YungChowFriedRice))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton11))
+                    .addComponent(SingaporeFriedRice)
+                    .addComponent(ShreddedDickFriedRice))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -155,19 +195,61 @@ public class OrderRice extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         OrderMain f2= new  OrderMain();
         f2.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void KingPrawnFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KingPrawnFriedRiceActionPerformed
+        int menuID = 23;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_KingPrawnFriedRiceActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void MushroomFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MushroomFriedRiceActionPerformed
+        int menuID = 26;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_MushroomFriedRiceActionPerformed
+
+    private void ShreddedDickFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShreddedDickFriedRiceActionPerformed
+        int menuID = 30;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_ShreddedDickFriedRiceActionPerformed
+
+    private void ChickenFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenFriedRiceActionPerformed
+        int menuID = 21;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_ChickenFriedRiceActionPerformed
+
+    private void BeefFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeefFriedRiceActionPerformed
+        int menuID = 22;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_BeefFriedRiceActionPerformed
+
+    private void ShrimpFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShrimpFriedRiceActionPerformed
+        int menuID = 24;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_ShrimpFriedRiceActionPerformed
+
+    private void SingaporeFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingaporeFriedRiceActionPerformed
+        int menuID = 25;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_SingaporeFriedRiceActionPerformed
+
+    private void SweetCornFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SweetCornFriedRiceActionPerformed
+        int menuID = 27;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_SweetCornFriedRiceActionPerformed
+
+    private void EggFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EggFriedRiceActionPerformed
+        int menuID = 28;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_EggFriedRiceActionPerformed
+
+    private void YungChowFriedRiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YungChowFriedRiceActionPerformed
+        int menuID = 29;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_YungChowFriedRiceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,17 +287,17 @@ public class OrderRice extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton Back;
+    private javax.swing.JButton BeefFriedRice;
+    private javax.swing.JButton ChickenFriedRice;
+    private javax.swing.JButton EggFriedRice;
+    private javax.swing.JButton KingPrawnFriedRice;
+    private javax.swing.JButton MushroomFriedRice;
+    private javax.swing.JButton ShreddedDickFriedRice;
+    private javax.swing.JButton ShrimpFriedRice;
+    private javax.swing.JButton SingaporeFriedRice;
+    private javax.swing.JButton SweetCornFriedRice;
+    private javax.swing.JButton YungChowFriedRice;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

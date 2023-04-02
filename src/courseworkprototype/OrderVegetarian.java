@@ -27,35 +27,50 @@ public class OrderVegetarian extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        TofuCurry = new javax.swing.JButton();
+        TofuChowMein = new javax.swing.JButton();
+        SpicyVegetableCurry = new javax.swing.JButton();
+        SpicyVegetableChowMein = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        VegetableChowMein = new javax.swing.JButton();
+        VegetableCurry = new javax.swing.JButton();
+        FakeChickenCurry = new javax.swing.JButton();
+        FakeChickenChowMein = new javax.swing.JButton();
+        MushroomChowMein = new javax.swing.JButton();
+        MushroomCurry = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        jButton8.setText("Tofu Curry");
-
-        jButton9.setText("Tofu Chow Mein ");
-
-        jButton10.setText("Spicy Vegetable Curry");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        TofuCurry.setText("Tofu Curry");
+        TofuCurry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                TofuCurryActionPerformed(evt);
             }
         });
 
-        jButton11.setText("Spicy Vegetable Chow Mein");
+        TofuChowMein.setText("Tofu Chow Mein ");
+        TofuChowMein.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TofuChowMeinActionPerformed(evt);
+            }
+        });
+
+        SpicyVegetableCurry.setText("Spicy Vegetable Curry");
+        SpicyVegetableCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SpicyVegetableCurryActionPerformed(evt);
+            }
+        });
+
+        SpicyVegetableChowMein.setText("Spicy Vegetable Chow Mein");
+        SpicyVegetableChowMein.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SpicyVegetableChowMeinActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setText("Back");
@@ -67,22 +82,47 @@ public class OrderVegetarian extends javax.swing.JFrame {
 
         jLabel1.setText("Vegetarian Dishes");
 
-        jButton1.setText("Vegetable Chow Mein");
-
-        jButton3.setText("Vegetable Curry");
-
-        jButton4.setText("Fake Chicken Curry");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        VegetableChowMein.setText("Vegetable Chow Mein");
+        VegetableChowMein.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                VegetableChowMeinActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Fake Chicken Chow Mein");
+        VegetableCurry.setText("Vegetable Curry");
+        VegetableCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VegetableCurryActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("Mushroom Chow Mein");
+        FakeChickenCurry.setText("Fake Chicken Curry");
+        FakeChickenCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FakeChickenCurryActionPerformed(evt);
+            }
+        });
 
-        jButton7.setText("Mushroom Curry");
+        FakeChickenChowMein.setText("Fake Chicken Chow Mein");
+        FakeChickenChowMein.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FakeChickenChowMeinActionPerformed(evt);
+            }
+        });
+
+        MushroomChowMein.setText("Mushroom Chow Mein");
+        MushroomChowMein.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MushroomChowMeinActionPerformed(evt);
+            }
+        });
+
+        MushroomCurry.setText("Mushroom Curry");
+        MushroomCurry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MushroomCurryActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,22 +138,22 @@ public class OrderVegetarian extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(FakeChickenChowMein, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                            .addComponent(MushroomChowMein, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(FakeChickenCurry, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(50, 50, 50)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(SpicyVegetableCurry, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SpicyVegetableChowMein, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TofuChowMein, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(VegetableChowMein, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(VegetableCurry, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(50, 50, 50)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(MushroomCurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TofuCurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(33, 33, 33))
         );
         jPanel1Layout.setVerticalGroup(
@@ -124,24 +164,24 @@ public class OrderVegetarian extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton7))
+                    .addComponent(VegetableChowMein)
+                    .addComponent(MushroomCurry))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
-                    .addComponent(jButton3))
+                    .addComponent(TofuCurry)
+                    .addComponent(VegetableCurry))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9)
-                    .addComponent(jButton4))
+                    .addComponent(TofuChowMein)
+                    .addComponent(FakeChickenCurry))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton10))
+                    .addComponent(FakeChickenChowMein)
+                    .addComponent(SpicyVegetableCurry))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton11))
+                    .addComponent(MushroomChowMein)
+                    .addComponent(SpicyVegetableChowMein))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -165,13 +205,55 @@ public class OrderVegetarian extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void FakeChickenCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FakeChickenCurryActionPerformed
+        int menuID = 33;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_FakeChickenCurryActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void SpicyVegetableCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SpicyVegetableCurryActionPerformed
+        int menuID = 39;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_SpicyVegetableCurryActionPerformed
+
+    private void VegetableChowMeinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VegetableChowMeinActionPerformed
+        int menuID = 31;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_VegetableChowMeinActionPerformed
+
+    private void VegetableCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VegetableCurryActionPerformed
+        int menuID = 32;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_VegetableCurryActionPerformed
+
+    private void FakeChickenChowMeinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FakeChickenChowMeinActionPerformed
+        int menuID = 34;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_FakeChickenChowMeinActionPerformed
+
+    private void MushroomChowMeinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MushroomChowMeinActionPerformed
+        int menuID = 35;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_MushroomChowMeinActionPerformed
+
+    private void MushroomCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MushroomCurryActionPerformed
+        int menuID = 36;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_MushroomCurryActionPerformed
+
+    private void TofuCurryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TofuCurryActionPerformed
+        int menuID = 37;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_TofuCurryActionPerformed
+
+    private void TofuChowMeinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TofuChowMeinActionPerformed
+        int menuID = 38;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_TofuChowMeinActionPerformed
+
+    private void SpicyVegetableChowMeinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SpicyVegetableChowMeinActionPerformed
+        int menuID = 40;
+        OrderMain.orderList(menuID);
+    }//GEN-LAST:event_SpicyVegetableChowMeinActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,17 +291,17 @@ public class OrderVegetarian extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
+    private javax.swing.JButton FakeChickenChowMein;
+    private javax.swing.JButton FakeChickenCurry;
+    private javax.swing.JButton MushroomChowMein;
+    private javax.swing.JButton MushroomCurry;
+    private javax.swing.JButton SpicyVegetableChowMein;
+    private javax.swing.JButton SpicyVegetableCurry;
+    private javax.swing.JButton TofuChowMein;
+    private javax.swing.JButton TofuCurry;
+    private javax.swing.JButton VegetableChowMein;
+    private javax.swing.JButton VegetableCurry;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

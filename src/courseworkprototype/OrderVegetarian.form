@@ -54,26 +54,26 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton5" alignment="1" pref="174" max="32767" attributes="0"/>
-                              <Component id="jButton6" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jButton4" alignment="1" max="32767" attributes="0"/>
+                              <Component id="FakeChickenChowMein" alignment="1" pref="174" max="32767" attributes="0"/>
+                              <Component id="MushroomChowMein" alignment="1" max="32767" attributes="0"/>
+                              <Component id="FakeChickenCurry" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton10" min="-2" pref="174" max="-2" attributes="0"/>
-                              <Component id="jButton11" min="-2" pref="174" max="-2" attributes="0"/>
-                              <Component id="jButton9" min="-2" pref="174" max="-2" attributes="0"/>
+                              <Component id="SpicyVegetableCurry" min="-2" pref="174" max="-2" attributes="0"/>
+                              <Component id="SpicyVegetableChowMein" min="-2" pref="174" max="-2" attributes="0"/>
+                              <Component id="TofuChowMein" min="-2" pref="174" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton1" min="-2" pref="174" max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" pref="174" max="-2" attributes="0"/>
+                              <Component id="VegetableChowMein" min="-2" pref="174" max="-2" attributes="0"/>
+                              <Component id="VegetableCurry" min="-2" pref="174" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton7" max="32767" attributes="0"/>
-                              <Component id="jButton8" max="32767" attributes="0"/>
+                              <Component id="MushroomCurry" max="32767" attributes="0"/>
+                              <Component id="TofuCurry" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -90,28 +90,28 @@
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="VegetableChowMein" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="MushroomCurry" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TofuCurry" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="VegetableCurry" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TofuChowMein" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="FakeChickenCurry" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="FakeChickenChowMein" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SpicyVegetableCurry" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="MushroomChowMein" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SpicyVegetableChowMein" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="31" max="32767" attributes="0"/>
               </Group>
@@ -119,28 +119,37 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton8">
+        <Component class="javax.swing.JButton" name="TofuCurry">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tofu Curry"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TofuCurryActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton9">
+        <Component class="javax.swing.JButton" name="TofuChowMein">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tofu Chow Mein "/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TofuChowMeinActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton10">
+        <Component class="javax.swing.JButton" name="SpicyVegetableCurry">
           <Properties>
             <Property name="text" type="java.lang.String" value="Spicy Vegetable Curry"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SpicyVegetableCurryActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton11">
+        <Component class="javax.swing.JButton" name="SpicyVegetableChowMein">
           <Properties>
             <Property name="text" type="java.lang.String" value="Spicy Vegetable Chow Mein"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SpicyVegetableChowMeinActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
@@ -158,38 +167,53 @@
             <Property name="text" type="java.lang.String" value="Vegetarian Dishes"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="VegetableChowMein">
           <Properties>
             <Property name="text" type="java.lang.String" value="Vegetable Chow Mein"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VegetableChowMeinActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="VegetableCurry">
           <Properties>
             <Property name="text" type="java.lang.String" value="Vegetable Curry"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VegetableCurryActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="FakeChickenCurry">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fake Chicken Curry"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FakeChickenCurryActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="FakeChickenChowMein">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fake Chicken Chow Mein"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FakeChickenChowMeinActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="MushroomChowMein">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mushroom Chow Mein"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MushroomChowMeinActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="MushroomCurry">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mushroom Curry"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MushroomCurryActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
