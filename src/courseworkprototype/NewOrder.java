@@ -267,7 +267,7 @@ public class NewOrder extends javax.swing.JFrame {
         int postlength = postcode.length();
         int phonelength = phonenumber.length();
 
-        if (postlength >= 7 || postlength <= 5) {
+        if (postlength > 8 || postlength < 6) {
             validated = false;
             PostError.setText("Error: Postcode must be between 5 and 7 characters");
         }else{
